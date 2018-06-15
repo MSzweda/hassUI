@@ -1,5 +1,5 @@
-from django.shortcuts import render
+from django.urls import reverse
+from django.views import generic
 
-def index(request):
-    context = {}
-    return render(request, 'dashboard/index.html', context)
+class IndexView(generic.TemplateView):
+    template_name = 'dashboard/index.html'
